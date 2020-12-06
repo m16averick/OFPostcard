@@ -8,7 +8,7 @@
 class Particle {
 public:
 	void setup();
-	void update(WunderClass wunder[100]);
+	void update();
 	void draw();
 	bool isDead();
 

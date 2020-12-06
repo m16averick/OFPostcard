@@ -3,46 +3,49 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include <vector>
-#include "PlanetClass.h"
+#include "RingClass.h"
 
 #include "WunderClass.h"
 #include "Particle.h"
 
 using namespace std;
 
-class ofApp : public ofBaseApp{
+class ofApp : public ofBaseApp {
 
-	public:
-		void setup();
-		void update();
-		void draw();
+public:
+	void setup();
+	void update();
+	void draw();
 
-		void keyPressed(int key);
-		void keyReleased(int key);
-		void mouseMoved(int x, int y );
-		void mouseDragged(int x, int y, int button);
-		void mousePressed(int x, int y, int button);
-		void mouseReleased(int x, int y, int button);
-		void mouseEntered(int x, int y);
-		void mouseExited(int x, int y);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
+	void keyPressed(int key);
+	void keyReleased(int key);
+	void mouseMoved(int x, int y);
+	void mouseDragged(int x, int y, int button);
+	void mousePressed(int x, int y, int button);
+	void mouseReleased(int x, int y, int button);
+	void mouseEntered(int x, int y);
+	void mouseExited(int x, int y);
+	void windowResized(int w, int h);
+	void dragEvent(ofDragInfo dragInfo);
+	void gotMessage(ofMessage msg);
 
-		int amount;
+	int amount;
 
-		ofEasyCam cam;
+	ofEasyCam cam;
 
-		ofxPanel gui;
-		ofParameterGroup planetGroups;
-		PlanetClass planets[20];
-		WunderClass wunder[100];
+	ofxPanel gui;
+	ofParameterGroup planetGroups;
+	RingClass rings[20];
+	WunderClass wunder;
 
-		ofSoundPlayer beat;
-		float* fftSmooth;
-		int bands;
-		int bandtwidth;
-		//ParticleSystem ps;
-		vector<Particle> particles;
-		
+	ofSoundPlayer sound;
+	float* fft;
+	float* soundSpectrum;
+	float decay;
+	int bands;
+	float sum1, sum2, sum3;
+	ofVec3f newPosition, newPosition2, newPosition3;
+	//ParticleSystem ps;
+	vector<Particle> particles;
+
 };

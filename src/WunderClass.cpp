@@ -1,26 +1,42 @@
 #include "WunderClass.h"
 
 void WunderClass::setup() {
-	planetGroup.add(rotateSpeed.set("speed", 0.02, 0.0, 1.0));
-	//planetGroup.add(posX.set("X", 0, 0, 600));
-	planetGroup.add(posY.set("R", ofRandom(300)+100, 0, 600));
-	planetGroup.add(size.set("Size", ofRandom(5)+5, 0, 120));
-	planetGroup.add(red.set("red", ofRandom(255), 0, 255));
-	planetGroup.add(green.set("green", ofRandom(255), 0, 255));
-	planetGroup.add(blue.set("blue", ofRandom(255), 0, 255));
+	ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
+	pniak.set(70, 100);
+	pniak.rotateDeg(90, -1, 0, 0);
+	pniak.setPosition(0, 0, pniak.getHeight()/2);
 
-	posX.set("X", 0, 0, 600);
-	posY.set("Y", 0, 0, 600);
+	drzewo1.set(220, 300, 30, 10);
+	drzewo1.rotateDeg(90, -1, 0, 0);
+	drzewo1.setPosition(0, 0, 240);
+
+	drzewo2 = drzewo1;
+	drzewo2.setScale(0.9, 0.9, 0.9);
+	drzewo2.setPosition(0, 0, 330);
+
+	drzewo3 = drzewo2;
+	drzewo3.setScale(0.8, 0.8, 0.8);
+	drzewo3.setPosition(0, 0, 420);
+
+	drzewo4 = drzewo3;
+	drzewo4.setScale(0.65, 0.75, 0.65);
+	drzewo4.setPosition(0, 0, 520);
 }
 
 void WunderClass::update() {
-	rotation+=0.1;
-	position = ofVec3f(posX, posY, posZ);
-	std::cout << position << endl;
+
 }
 
 void WunderClass::draw() {
-	//ofSetColor(red, green, blue);
-	ofRotate(rotation * rotateSpeed);
-	ofCircle(posX, posY, size);
+	ofSetColor(43, 21, 0);
+	pniak.draw();
+
+	ofSetColor(0, 75, 0);
+	drzewo1.draw();
+	ofSetColor(0, 80, 0);
+	drzewo2.draw();
+	ofSetColor(0, 85, 0);
+	drzewo3.draw();
+	ofSetColor(0, 90, 0);
+	drzewo4.draw();
 }

@@ -1,3 +1,4 @@
+  
 #pragma once
 
 #include "ofMain.h"
@@ -8,18 +9,9 @@ public:
 	void update();
 	void draw();
 
-	ofParameterGroup planetGroup;
-	ofParameter<float> rotateSpeed;
-	ofParameter<float> posX;
-	ofParameter<float> posY;
-	ofParameter<float> posZ;
-	ofParameter<int> red;
-	ofParameter<int> green;
-	ofParameter<int> blue;
-	ofParameter<int> mass;
 
-	ofParameter<int> size;
-	float rotation = 0.0;
-	//ofParameter<int> mass;
-	ofVec3f position;
+
+	ofCylinderPrimitive pniak;
+	ofConePrimitive drzewo1, drzewo2, drzewo3, drzewo4;
+
 };
