@@ -17,3 +17,7 @@ You'll need OpenFrameworks library.
 ### Merry Christmas
 
 Everyone!
+
+### How does it look like?
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/7aRKnyPSaC4/hqdefault.jpg)](https://www.youtube.com/watch?v=7aRKnyPSaC4)
