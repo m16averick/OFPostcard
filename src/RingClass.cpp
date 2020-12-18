@@ -10,7 +10,7 @@ void RingClass::setup(float radius1, float radius2, int red, int green, int blue
 	k = 7;
 	mass = 60;
 	gravity = 15;
-	damping = 10;
+	damping = 12;
 }
 
 void RingClass::update() {

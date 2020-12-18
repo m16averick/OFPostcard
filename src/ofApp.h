@@ -47,5 +47,5 @@ public:
 	ofVec3f newPosition, newPosition2, newPosition3;
 	//ParticleSystem ps;
 	vector<Particle> particles;
-
+	bool snow = false;
 };

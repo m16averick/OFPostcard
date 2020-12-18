@@ -8,7 +8,8 @@ public:
 	void setup();
 	void update();
 	void draw();
-
+	bool isInside(ofVec3f point);
+	bool collision = true;
 
 
 	ofCylinderPrimitive pniak;

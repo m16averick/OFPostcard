@@ -6,6 +6,7 @@ void WunderClass::setup() {
 	pniak.rotateDeg(90, -1, 0, 0);
 	pniak.setPosition(0, 0, pniak.getHeight()/2);
 
+	//radius height
 	drzewo1.set(220, 300, 30, 10);
 	drzewo1.rotateDeg(90, -1, 0, 0);
 	drzewo1.setPosition(0, 0, 240);
@@ -23,6 +24,26 @@ void WunderClass::setup() {
 	drzewo4.setPosition(0, 0, 520);
 }
 
+float smallRadius(float bigRadius, float bigHeight, float newHeight)
+{
+	float stosunek = bigHeight / bigRadius;
+	float newRadius = newHeight / stosunek;
+	return newRadius;
+}
+
+bool WunderClass::isInside(ofVec3f point)
+{
+	if (collision)
+	{
+		if (point.z > 415 && sqrt((point.x * point.x) + (point.y * point.y)) < smallRadius(1450, 2200, drzewo4.getPosition().z - point.z + 120)) return true;
+		else if (point.z > 305 && sqrt((point.x * point.x) + (point.y * point.y)) < smallRadius(1150, 1900, drzewo3.getPosition().z - point.z + 180)) return true;
+		else if (point.z > 200 && sqrt((point.x * point.x) + (point.y * point.y)) < smallRadius(1850, 1900, drzewo3.getPosition().z - point.z)) return true;
+		else if (point.z > 100 && sqrt((point.x * point.x) + (point.y * point.y)) < smallRadius(1360, 1900, drzewo3.getPosition().z - point.z)) return true;
+		else return false;
+	}
+
+	else return false;
+}
 void WunderClass::update() {
 
 }

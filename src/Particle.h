@@ -18,6 +18,7 @@ public:
 	ofVec3f acceleration;
 	float lifespan;
 
+
 	bool check = false;
 	ofVec3f road;
 };
