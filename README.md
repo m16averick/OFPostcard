@@ -20,4 +20,4 @@ Everyone!
 
 ### How does it look like?
 
-[![IMAGE ALT TEXT HERE](/bin/data/THUMB.jpg)](https://www.youtube.com/watch?v=7aRKnyPSaC4)
+[![YT LINK](/THUMB.jpg)](https://www.youtube.com/watch?v=7aRKnyPSaC4)
